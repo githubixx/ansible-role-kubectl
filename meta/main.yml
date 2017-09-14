@@ -1,0 +1,12 @@
+galaxy_info:
+  author: Robert Wimmer
+  description: Installs kubectl command line utility used to interact with the Kubernetes API Server.
+  license: GPLv3
+  min_ansible_version: 2.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - xenial
+  galaxy_tags:
+    - kubernetes
+    - cli

@@ -1,0 +1,10 @@
+---
+- name: Download statically linked kubectl binary
+  get_url:
+    url: https://storage.googleapis.com/kubernetes-release/release/v{{kubectl_version}}/bin/{{kubectl_os}}/amd64/kubectl
+    dest: "{{kubectl_bin_directory}}/kubectl"
+    owner: "{{kubectl_owner}}"
+    group: "{{kubectl_group}}"
+    mode: 0755
+  tags:
+    - kubectl

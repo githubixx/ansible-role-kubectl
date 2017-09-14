@@ -1,0 +1,6 @@
+---
+kubectl_version: "1.7.6"
+kubectl_bin_directory: "/usr/local/bin"
+kubectl_owner: "root"
+kubectl_group: "root"
+kubectl_os: "linux" # use "darwin" for MacOS X

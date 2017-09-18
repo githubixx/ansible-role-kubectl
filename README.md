@@ -24,9 +24,11 @@ kubectl_os: linux # use "darwin" for MacOS X
 Example Playbook
 ----------------
 
+```
 - hosts: your-host
   roles:
     - githubixx.kubectl
+```
 
 License
 -------

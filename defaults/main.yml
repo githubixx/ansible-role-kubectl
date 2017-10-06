@@ -1,5 +1,5 @@
 ---
-kubectl_version: "1.7.6"
+kubectl_version: "1.8.0"
 kubectl_bin_directory: "/usr/local/bin"
 kubectl_owner: "root"
 kubectl_group: "root"

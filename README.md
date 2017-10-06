@@ -8,6 +8,7 @@ Versions
 
 I tag every release and try to stay with semantic versioning. If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too.
 
+v1.8.0 - update default kubectl to v1.8.0
 v1.0.0 - initial release
 
 Role Variables

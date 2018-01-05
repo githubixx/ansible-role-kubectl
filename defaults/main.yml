@@ -1,6 +1,9 @@
 ---
 kubectl_version: "1.9.1"
+kubectl_checksum: "sha256:fe8fe40148df404b33069931ea30937699758ed4611ef6baddb4c21b7b19db5e"
 kubectl_bin_directory: "/usr/local/bin"
+kubectl_tmp_directory: "{{lookup('env', 'TMPDIR') | default('/tmp',true)}}"
 kubectl_owner: "root"
 kubectl_group: "root"
-kubectl_os: "linux" # use "darwin" for MacOS X
+kubectl_os: "linux" # use "darwin" for MacOS X, "windows" for Windows
+kubectl_arch: "amd64" # other possible values: "386","arm64","arm","ppc64le","s390x"

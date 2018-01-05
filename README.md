@@ -10,7 +10,7 @@ I tag every release and try to stay with [semantic versioning](http://semver.org
 
 Changelog
 ---------
-**r2.0.0_v1.9.1**
+**r2.0.1_v1.9.1**
 
 - update default kubectl to v1.9.1
 - changed download location

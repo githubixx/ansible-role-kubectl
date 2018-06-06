@@ -11,9 +11,9 @@ I tag every release and try to stay with [semantic versioning](http://semver.org
 Changelog
 ---------
 
-**r3.0.0_v1.10.3**
+**r3.0.0_v1.10.4**
 
-- update default kubectl to v1.10.3
+- update default kubectl to v1.10.4
 
 **r2.0.2_v1.9.1**
 

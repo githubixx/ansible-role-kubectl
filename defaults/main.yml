@@ -1,6 +1,6 @@
 ---
 # "kubectl" version to install
-kubectl_version: "1.10.3"
+kubectl_version: "1.10.4"
 # SHA256 checksum of the archive (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.10.md
 # for the checksums
 kubectl_checksum: "sha256:687a75e695dd9f5f38d727f27df9ecdbb04594a4082acdde2c852b289ccaaefa"

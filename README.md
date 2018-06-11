@@ -31,10 +31,10 @@ Role Variables
 
 ```
 # "kubectl" version to install
-kubectl_version: "1.10.3"
+kubectl_version: "1.10.4"
 # SHA256 checksum of the archive (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.10.md
 # for the checksums
-kubectl_checksum: "sha256:687a75e695dd9f5f38d727f27df9ecdbb04594a4082acdde2c852b289ccaaefa"
+kubectl_checksum: "sha256:2831fe621bf1542a1eac38b8f50aa40a96b26153e850b3ff7155e5ce4f4f400e"
 # Where to install "kubectl" binary
 kubectl_bin_directory: "/usr/local/bin"
 # Directory to store the kubeclient archive

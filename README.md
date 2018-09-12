@@ -11,6 +11,11 @@ I tag every release and try to stay with [semantic versioning](http://semver.org
 Changelog
 ---------
 
+**r3.0.1_v1.10.4**
+
+- Ubuntu 18.04 supported
+- update README
+
 **r3.0.0_v1.10.4**
 
 - update default kubectl to v1.10.4

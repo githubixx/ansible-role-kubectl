@@ -1,9 +1,9 @@
 ---
 # "kubectl" version to install
-kubectl_version: "1.10.8"
-# SHA256 checksum of the archive (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.10.md
+kubectl_version: "1.11.3"
+# SHA256 checksum of the archive (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.11.md
 # for the checksums
-kubectl_checksum: "sha256:925594f5e3b062323701e3d751b2a4fbd5aa7f48f5e6271b6b9aa8280dee7e7b"
+kubectl_checksum: "sha256:14a70ac05c00fcfd7d632fc9e7a5fbc6615ce1b370bb1a0e506a24972d461493"
 # Where to install "kubectl" binary
 kubectl_bin_directory: "/usr/local/bin"
 # Directory to store the kubeclient archive

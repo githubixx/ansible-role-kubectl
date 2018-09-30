@@ -11,6 +11,10 @@ I tag every release and try to stay with [semantic versioning](http://semver.org
 Changelog
 ---------
 
+**r4.0.0_v1.11.3**
+
+- update default kubectl to v1.11.3
+
 **r3.0.2_v1.10.8**
 
 - update default kubectl to v1.10.8

@@ -11,6 +11,10 @@ I tag every release and try to stay with [semantic versioning](http://semver.org
 Changelog
 ---------
 
+**r6.0.0_v1.13.0**
+
+- update default kubectl to v1.13.0
+
 **r5.0.1_v1.12.1**
 
 - update default kubectl to v1.12.1
@@ -52,10 +56,10 @@ Role Variables
 
 ```
 # "kubectl" version to install
-kubectl_version: "1.12.1"
+kubectl_version: "1.13.0"
 # SHA512 checksum of the archive (for "kubernetes-client-linux-amd64.tar.gz" by default).
-# See https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.12.md for the checksums.
-kubectl_checksum: "sha512:f8a6f010ee769740d4271792187ee2ec38db385cd8ef86c1acb8858b3bc1393352ccaad82e97383ce43426ac372e705ce1466a47ad5ac6adfc037de0469ec133"
+# See https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.13.md for the checksums.
+kubectl_checksum: "sha512:61a6cd3b1fb34507e0b762a45da09d88e34921985970a2ba594e0e5af737d94c966434b4e9f8e84fb73a0aeb5fa3e557344cd2eb902bf73c67d4b4bff33c6831"
 # Where to install "kubectl" binary
 kubectl_bin_directory: "/usr/local/bin"
 # Directory to store the kubeclient archive

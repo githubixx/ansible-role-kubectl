@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+**7.1.1+1.13.2**
+
+- add link to CHANGELOG in README
+
 **7.1.0+1.13.2**
 
 - update default kubectl to v1.13.2

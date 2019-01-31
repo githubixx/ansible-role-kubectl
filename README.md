@@ -11,6 +11,7 @@ I tag every release and try to stay with [semantic versioning](http://semver.org
 Changelog
 ---------
 
+see [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/master/CHANGELOG.md)
 
 Role Variables
 --------------

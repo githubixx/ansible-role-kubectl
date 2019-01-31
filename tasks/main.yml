@@ -19,8 +19,8 @@
     src: "{{ kubectl_tmp_directory }}/kubernetes/client/bin/{{ item }}"
     dest: "{{ kubectl_bin_directory }}/{{ item }}"
     mode: 0755
-    owner: root
-    group: root
+    owner: "{{ kubectl_owner }}"
+    group: "{{ kubectl_group }}"
     remote_src: yes
   with_items:
     - kubectl

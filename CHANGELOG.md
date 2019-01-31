@@ -1,6 +1,11 @@
 Changelog
 ---------
 
+**7.1.0+1.13.2**
+
+- update default kubectl to v1.13.2
+- `kubectl_owner` and `kubectl_group` now used (previous version always used user `root` and group `root`)
+
 **7.0.0+1.13.0**
 
 - use correct semantic versioning as described in https://semver.org. Needed for Ansible Galaxy importer as it now insists on using semantic versioning.

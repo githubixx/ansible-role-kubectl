@@ -18,10 +18,10 @@ Role Variables
 
 ```
 # "kubectl" version to install
-kubectl_version: "1.14.2"
-# SHA512 checksum of the archive (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.14.md
+kubectl_version: "1.15.3"
+# SHA512 checksum of the archive (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.15.md
 # for further checksums for other architectures)
-kubectl_checksum: "sha512:a4394293cecdc177db7d3ef29f9d9efb7f922d193b00d83fa17c847e2aa1cd1c38eff1f4233843fededf15d99f7c434bf701d84b93a3cb834a4699cbddf02385"
+kubectl_checksum: "sha512:93049dcadbe401fc2ed2f53ace598aa4bd183142ec2b7451d2a53e61c4bbc64f393639df166853cbf62c361839f87a386015c0be6b1a9a4d3c9fa84564d376ef"
 # Where to install "kubectl" binary
 kubectl_bin_directory: "/usr/local/bin"
 # Directory to store the kubeclient archive

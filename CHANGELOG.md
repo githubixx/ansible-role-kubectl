@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+**8.0.2+1.14.6**
+
+- update default kubectl to v1.14.6
+
 **8.0.1+1.14.2**
 
 - update default kubectl to v1.14.2

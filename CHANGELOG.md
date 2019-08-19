@@ -1,6 +1,27 @@
 Changelog
 ---------
 
+**No version change**
+
+- Because Ansible Galaxy only allows tags using semantic versioning format I had to change some older tags. If you really rely on that old tags the following tag names changed:
+
+```
+r1.0.0_v1.8.0  -> 1.0.0+1.8.0
+r1.0.2_v1.8.0  -> 1.0.2+1.8.0
+r2.0.0_v1.9.1  -> 2.0.0+1.9.1
+r2.0.1_v1.9.1  -> 2.0.1+1.9.1
+r2.0.2_v1.9.1  -> 2.0.2+1.9.1
+r3.0.0_v1.10.4 -> 3.0.0+1.10.4
+r3.0.1_v1.10.4 -> 3.0.1+1.10.4
+r3.0.2_v1.10.8 -> 3.0.2+1.10.8
+r5.0.0_v1.12.0 -> 5.0.0+1.12.0
+r5.0.1_v1.12.1 -> 5.0.1+1.12.1
+r6.0.0_v1.13.0 -> 6.0.0+1.13.0
+r6.0.1_v1.13.0 -> 6.0.1+1.13.0
+```
+
+The commits (the SHA1) behind the tags are still the same of course.
+
 **9.0.0+1.15.3**
 
 - update default kubectl to v1.15.3

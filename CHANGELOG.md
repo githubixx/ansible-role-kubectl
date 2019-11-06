@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+**9.0.1+1.15.5**
+
+- update default kubectl to v1.15.5
+
 **No version change**
 
 - Because Ansible Galaxy only allows tags using semantic versioning format I had to change some older tags. If you really rely on that old tags the following tag names changed:

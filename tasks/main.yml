@@ -11,6 +11,7 @@
   unarchive:
     src: "{{ kubectl_tmp_directory }}/kubernetes-client-{{ kubectl_os }}-{{ kubectl_arch }}.tar.gz"
     dest: "{{ kubectl_tmp_directory }}"
+    remote_src: yes
   tags:
     - kubectl
 

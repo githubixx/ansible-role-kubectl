@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+**10.1.0+1.16.3**
+
+- use `remote_src: yes` for unarchive
+
 **10.0.0+1.16.3**
 
 - update default kubectl to v1.16.3

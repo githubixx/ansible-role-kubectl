@@ -1,0 +1,27 @@
+---
+- name: Download kubectl archive
+  get_url:
+    url: "https://storage.googleapis.com/kubernetes-release/release/v{{ kubectl_version }}/kubernetes-client-{{ kubectl_os }}-{{ kubectl_arch }}.tar.gz"
+    checksum: "{{ kubectl_checksum_archive }}"
+    dest: "{{ kubectl_tmp_directory }}"
+  tags:
+    - kubectl
+
+- name: Unarchive kubernetes-client
+  unarchive:
+    src: "{{ kubectl_tmp_directory }}/kubernetes-client-{{ kubectl_os }}-{{ kubectl_arch }}.tar.gz"
+    dest: "{{ kubectl_tmp_directory }}"
+    remote_src: yes
+  tags:
+    - kubectl
+
+- name: Copy kubectl binary to destination directory
+  copy:
+    src: "{{ kubectl_tmp_directory }}/kubernetes/client/bin/{{ item }}"
+    dest: "{{ kubectl_bin_directory }}/{{ item }}"
+    mode: "{{ kubectl_binary_mode }}"
+    owner: "{{ kubectl_owner }}"
+    group: "{{ kubectl_group }}"
+    remote_src: yes
+  with_items:
+    - kubectl

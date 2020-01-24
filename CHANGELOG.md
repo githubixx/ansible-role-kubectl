@@ -1,6 +1,15 @@
 Changelog
 ---------
 
+**11.0.0+1.17.2**
+
+- update default kubectl to v1.17.2
+- introduce possibility to download either `.tar.gz` file or the `binary` file (which is about 2.5x bigger then the tarball but needs no unarchive (initial contribution by @lucendio)
+- introduce `kubectl_download_filetype` variable. This can be either `archive` (default) or `binary`. See `defaults/main.yml` or README for further information
+- `kubectl_checksum` variable renamed to `kubectl_checksum_archive` which specifies the SHA512 checksum of the `.tar.gz` file. See `defaults/main.yml` or README for further information
+- introduce `kubectl_checksum_binary` variable which specifies the SHA512 checksum of the `binary` file. See `defaults/main.yml` or README for further information
+- introduce `kubectl_binary_mode` variable to change file permissions of `kubectl` binary. Defaults to `0755`. This value was hardcoded before so the default value haven't changed but now it can be configured
+
 **10.1.0+1.16.3**
 
 - use `remote_src: yes` for unarchive

@@ -1,0 +1,19 @@
+---
+- name: Download kubectl binary
+  get_url:
+    url: "https://storage.googleapis.com/kubernetes-release/release/v{{ kubectl_version }}/bin/{{ kubectl_os }}/{{ kubectl_arch }}/kubectl"
+    checksum: "{{ kubectl_checksum_binary }}"
+    dest: "{{ kubectl_tmp_directory }}"
+  tags:
+    - kubectl
+
+- name: Copy kubectl binary to destination directory
+  copy:
+    src: "{{ kubectl_tmp_directory }}/{{ item }}"
+    dest: "{{ kubectl_bin_directory }}/{{ item }}"
+    mode: "{{ kubectl_binary_mode }}"
+    owner: "{{ kubectl_owner }}"
+    group: "{{ kubectl_group }}"
+    remote_src: yes
+  with_items:
+    - kubectl

@@ -1,7 +1,7 @@
 ---
 # "kubectl" version to install
 kubectl_version: "1.16.3"
-# SHA512 checksum of the archive (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.16.md
+# SHA512 checksum of the binary (see https://storage.googleapis.com/kubernetes-release/release/v1.16.3/bin/linux/amd64/kubectl.sha512)
 # for the checksums)
 kubectl_checksum: "sha512:67a75b26d692b88a04215e78903e7e3d5f177ff6abfa77037e09cfa256f9d37068c7c5d39040b43604cfda9ed1f69166835cda76009a1c43b1f428e69f5243cc"
 # Where to install "kubectl" binary

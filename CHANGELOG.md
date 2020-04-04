@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+**11.0.2+1.17.4**
+
+- update default kubectl to v1.17.4
+
 **11.0.1+1.17.2**
 
 - update README

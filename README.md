@@ -18,7 +18,7 @@ Role Variables
 
 ```
 # "kubectl" version to install
-kubectl_version: "1.17.2"
+kubectl_version: "1.17.4"
 # The default "archive" will download "kubectl" as a ".tar.gz" file. This is
 # about 2.5x smaller then "binary" but the tarball needs to be unarchived
 # by the role first after downloading.

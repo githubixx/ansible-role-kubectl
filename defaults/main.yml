@@ -1,6 +1,7 @@
 ---
 # "kubectl" version to install
-kubectl_version: "1.18.5"
+kubectl_version: "1.19.4"
+
 # The default "archive" will download "kubectl" as a ".tar.gz" file. This is
 # about 2.5x smaller then "binary" but the tarball needs to be unarchived
 # by the role first after downloading.
@@ -10,21 +11,28 @@ kubectl_version: "1.18.5"
 # If download file size is important for you (e.g. slow download or download
 # over mobile link) stay with "archive". Otherwise "binary" might be an option.
 kubectl_download_filetype: "binary"
-# SHA512 checksum of the .tar.gz file (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.18.md#client-binaries)
-kubectl_checksum_archive: "sha512:01e9c71d65c4513c03b22b2b036c3e92875fa4ebdb43b4909a6b21608093d280d9f71953f9656b3728019bdc8cb6bbf864de3c6a3eb94d807ec0330dbccfa005"
+# SHA512 checksum of the .tar.gz file (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.19.md#client-binaries)
+kubectl_checksum_archive: "sha512:7e65358a19b4eabfbbf886061098d7edc1268ab59a3e0f813a264ff525bed8c76f4f0bd5bcb151d8a05dcb1b2f25d874e2346d448725e701614439a27f960079"
 # SHA512 checksum of the binary (see https://storage.googleapis.com/kubernetes-release/release/v1.18.5/bin/linux/amd64/kubectl.sha512)
-kubectl_checksum_binary: "sha512:5a99ce73a14da6ab561016b83906c398f082dd7571771b6b16430445f6668587a2ad2f5ca9e5a330bcc3fad5f4a7f21109042defcd674acae8cd7170b49ed947"
+kubectl_checksum_binary: "sha512:a0f0b68116f2bcf9469a569070829c5d0f10231df2b3f53c672e8b0ffb8ccf3112e89bc330bc74692171889c93d74b664cf960dd1925ca3a9b242ebba33e2ee5"
+
 # Where to install "kubectl" binary
 kubectl_bin_directory: "/usr/local/bin"
+
 # Directory to store the kubeclient archive
 kubectl_tmp_directory: "{{ lookup('env', 'TMPDIR') | default('/tmp',true) }}"
+
 # Owner of "kubectl" binary
 kubectl_owner: "root"
+
 # Group of "kubectl" binary
 kubectl_group: "root"
+
 # Specifies the permissions of the "kubectl" binary
 kubectl_binary_mode: "0755"
+
 # Operarting system on which "kubectl" should run on
 kubectl_os: "linux" # use "darwin" for MacOS X, "windows" for Windows
+
 # Processor architecture "kubectl" should run on
 kubectl_arch: "amd64" # other possible values: "386","arm64","arm","ppc64le","s390x"

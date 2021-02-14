@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+**14.0.1+1.20.4**
+
+- added Ubuntu 20.04 to role metadata
+
 **14.0.0+1.20.4**
 
 - update default kubectl to v1.20.4

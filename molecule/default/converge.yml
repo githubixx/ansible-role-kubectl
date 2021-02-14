@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: Install Python
+      raw: |
+        apt-get update
+        apt-get -y install ca-certificates python3
+      changed_when: false
+      ignore_errors: true
+
+    - name: Call setup
+      setup:
+
+    - name: Include kubectl role
+      include_role:
+        name: githubixx.kubectl

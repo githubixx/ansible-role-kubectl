@@ -16,7 +16,7 @@ see [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/master/CH
 Role Variables
 --------------
 
-```
+```yaml
 # "kubectl" version to install
 kubectl_version: "1.20.2"
 
@@ -54,6 +54,40 @@ kubectl_os: "linux" # use "darwin" for MacOS X, "windows" for Windows
 
 # Processor architecture "kubectl" should run on
 kubectl_arch: "amd64" # other possible values: "386","arm64","arm","ppc64le","s390x"
+```
+
+Testing
+-------
+
+This role has a small test setup that is created using [molecule](https://github.com/ansible-community/molecule). To run the tests follow the molecule [install guide](https://molecule.readthedocs.io/en/latest/installation.html). Also ensure that a Docker daemon runs on your machine.
+
+Assuming [Docker](https://www.docker.io) is already installed you need at least two Python packages:
+
+```bash
+pip3 install --user molecule
+pip3 install --user molecule-docker
+```
+
+Afterwards molecule can be executed:
+
+```bash
+molecule converge
+```
+
+This will setup two Docker container with Ubuntu 20.04 and 18.04 with `kubectl` installed. So you should be able to execute the following commands if everything worked well:
+
+```bash
+docker exec -it test-ubuntu-2004 kubectl version --client=true
+Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.2", GitCommit:"faecb196815e248d3ecfb03c680a4507229c2a56", GitTreeState:"clean", BuildDate:"2021-01-13T13:28:09Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"linux/amd64"}
+
+docker exec -it test-ubuntu-1804 kubectl version --client=true
+Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.2", GitCommit:"faecb196815e248d3ecfb03c680a4507229c2a56", GitTreeState:"clean", BuildDate:"2021-01-13T13:28:09Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"linux/amd64"}
+```
+
+To clean up run
+
+```bash
+molecule destroy
 ```
 
 Example Playbook

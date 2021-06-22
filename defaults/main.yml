@@ -1,6 +1,6 @@
 ---
 # "kubectl" version to install
-kubectl_version: "1.20.2"
+kubectl_version: "1.21.2"
 
 # The default "archive" will download "kubectl" as a ".tar.gz" file. This is
 # about 2.5x smaller then "binary" but the tarball needs to be unarchived
@@ -11,10 +11,10 @@ kubectl_version: "1.20.2"
 # If download file size is important for you (e.g. slow download or download
 # over mobile link) stay with "archive". Otherwise "binary" might be an option.
 kubectl_download_filetype: "binary"
-# SHA512 checksum of the .tar.gz file (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.20.md#client-binaries)
-kubectl_checksum_archive: "sha512:e4513cdd65ed980d493259cc7eaa63c415f97516db2ea45fa8c743a6e413a0cdaf299d03dd799286cf322182bf9694204884bb0dd0037cf44592ddfa5e51f183"
-# SHA512 checksum of the binary (see https://storage.googleapis.com/kubernetes-release/release/v1.20.2/bin/linux/amd64/kubectl.sha512)
-kubectl_checksum_binary: "sha512:95bc86fef323bf6e4c340565a8d8284c03ed5dbf44d7d5ec271ed9f1347c54d0484437fc598ff99a2000ed60064e7a92c64484e1764bea6dbd2082ff0c95e7f1"
+# SHA512 checksum of the .tar.gz file (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.21.md#client-binaries)
+kubectl_checksum_archive: "sha512:0d744eec49354250a43510efc4d911a4b67f3b36dc62c28e2b852e31e9d00e474d0f44287c5b89ccbafcaa91ed1ecaa12a881a25984aa6e33fdf5c55141e9349"
+# SHA512 checksum of the binary (see https://storage.googleapis.com/kubernetes-release/release/v1.21.2/bin/linux/amd64/kubectl.sha512)
+kubectl_checksum_binary: "sha512:fbd688840426d312dc5930f83c427d428559b2e3eca4c95cc39fb47fde960829bfe0dbb9ccf49ec80799ef013dbb0f4f1dc7aec59678d444b88eda8168fd77a9"
 
 # Where to install "kubectl" binary
 kubectl_bin_directory: "/usr/local/bin"

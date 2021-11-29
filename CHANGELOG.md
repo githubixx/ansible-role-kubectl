@@ -1,6 +1,14 @@
 Changelog
 ---------
 
+**17.0.0+1.22.4**
+
+- update default kubectl to v1.22.4
+- add Molecule tests for Debian 10 + 11
+- remove Ubuntu 16.04 (Xenial) support
+- separate vars for Ubuntu 10+11 in Molecule test to test kubectl_download_filetype option
+- update min. Ansible version to 2.9
+
 **16.0.0+1.22.1**
 
 - update default kubectl to v1.22.1

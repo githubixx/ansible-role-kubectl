@@ -75,13 +75,19 @@ Afterwards molecule can be executed:
 molecule converge
 ```
 
-This will setup two Docker container with Ubuntu 20.04 and 18.04 with `kubectl` installed. So you should be able to execute the following commands if everything worked well:
+This will setup a few Docker container with Ubuntu 18.04 + 20.04 and Debian 10 + 11 with `kubectl` installed. So you should be able to execute the following commands if everything worked well (depending on the `kubectl` version the output will vary of course):
 
 ```bash
+docker exec -it test-ubuntu-1804 kubectl version --client=true
+Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.2", GitCommit:"faecb196815e248d3ecfb03c680a4507229c2a56", GitTreeState:"clean", BuildDate:"2021-01-13T13:28:09Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"linux/amd64"}
+
 docker exec -it test-ubuntu-2004 kubectl version --client=true
 Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.2", GitCommit:"faecb196815e248d3ecfb03c680a4507229c2a56", GitTreeState:"clean", BuildDate:"2021-01-13T13:28:09Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"linux/amd64"}
 
-docker exec -it test-ubuntu-1804 kubectl version --client=true
+docker exec -it test-kubectl-debian10 kubectl version --client=true
+Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.2", GitCommit:"faecb196815e248d3ecfb03c680a4507229c2a56", GitTreeState:"clean", BuildDate:"2021-01-13T13:28:09Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"linux/amd64"}
+
+docker exec -it test-kubectl-debian11 kubectl version --client=true
 Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.2", GitCommit:"faecb196815e248d3ecfb03c680a4507229c2a56", GitTreeState:"clean", BuildDate:"2021-01-13T13:28:09Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"linux/amd64"}
 ```
 

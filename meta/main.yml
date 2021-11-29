@@ -9,6 +9,10 @@ galaxy_info:
       versions:
         - bionic
         - focal
+    - name: Debian
+      versions:
+        - buster
+        - bullseye
   galaxy_tags:
     - kubernetes
     - kubectl

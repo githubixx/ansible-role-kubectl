@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: Robert Wimmer
   description: Installs kubectl command line utility used to interact with the Kubernetes API Server.

@@ -12,6 +12,16 @@
     - name: Call setup
       setup:
 
+- hosts: test-kubectl-1804,test-kubectl-2004
+  vars_files:
+    - vars/ubuntu.yml
+  tasks:
+    - name: Include kubectl role
+      include_role:
+        name: githubixx.kubectl
+
+- hosts: test-kubectl-debian10,test-kubectl-debian11
+  tasks:
     - name: Include kubectl role
       include_role:
         name: githubixx.kubectl

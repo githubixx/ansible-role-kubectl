@@ -32,7 +32,7 @@ kubectl_group: "root"
 kubectl_binary_mode: "0755"
 
 # Operarting system on which "kubectl" should run on
-kubectl_os: "linux" # use "darwin" for MacOS X, "windows" for Windows
+kubectl_os: "linux"  # use "darwin" for MacOS X, "windows" for Windows
 
 # Processor architecture "kubectl" should run on
-kubectl_arch: "amd64" # other possible values: "386","arm64","arm","ppc64le","s390x"
+kubectl_arch: "amd64"  # other possible values: "386","arm64","arm","ppc64le","s390x"

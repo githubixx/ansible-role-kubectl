@@ -11,7 +11,7 @@
   unarchive:
     src: "{{ kubectl_tmp_directory }}/kubernetes-client-{{ kubectl_os }}-{{ kubectl_arch }}.tar.gz"
     dest: "{{ kubectl_tmp_directory }}"
-    remote_src: yes
+    remote_src: true
   tags:
     - kubectl
 
@@ -22,6 +22,6 @@
     mode: "{{ kubectl_binary_mode }}"
     owner: "{{ kubectl_owner }}"
     group: "{{ kubectl_group }}"
-    remote_src: yes
+    remote_src: true
   with_items:
     - kubectl

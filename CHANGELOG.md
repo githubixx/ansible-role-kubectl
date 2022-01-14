@@ -1,6 +1,12 @@
 Changelog
 ---------
 
+**18.0.0+1.23.1**
+
+- update default kubectl to v1.23.1
+- fix docker commands in testing section
+- make ansible-lint happy
+
 **17.0.0+1.22.4**
 
 - update default kubectl to v1.22.4

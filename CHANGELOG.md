@@ -3,6 +3,7 @@
 ## 18.0.1+1.23.2
 
 - update kubectl to `v1.23.2`
+- add `verify.yml` to Molecule to be able to run `molecule verify`
 
 ## 18.0.0+1.23.1
 

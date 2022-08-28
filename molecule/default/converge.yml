@@ -3,25 +3,25 @@
   gather_facts: false
   tasks:
     - name: Install Python
-      raw: |
+      ansible.builtin.raw: |
         apt-get update
         apt-get -y install ca-certificates python3
       changed_when: false
       failed_when: false
 
     - name: Call setup
-      setup:
+      ansible.builtin.setup:
 
-- hosts: test-kubectl-1804,test-kubectl-2004
+- hosts: test-kubectl-1804,test-kubectl-2004,test-kubectl-2204
   vars_files:
     - vars/ubuntu.yml
   tasks:
     - name: Include kubectl role
-      include_role:
+      ansible.builtin.include_role:
         name: githubixx.kubectl
 
 - hosts: test-kubectl-debian10,test-kubectl-debian11
   tasks:
     - name: Include kubectl role
-      include_role:
+      ansible.builtin.include_role:
         name: githubixx.kubectl

@@ -6,7 +6,7 @@ Installs kubectl command line utility used to interact with the Kubernetes API S
 Versions
 --------
 
-I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `18.0.1+1.23.2` means this is release `18.0.1` of this role and `kubectl` client binary version is `1.23.2`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
+I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `20.0.0+1.25.0` means this is release `20.0.0` of this role and `kubectl` client binary version is `1.25.0`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
 
 Changelog
 ---------
@@ -19,7 +19,7 @@ Role Variables
 ```yaml
 ---
 # "kubectl" version to install
-kubectl_version: "1.24.4"
+kubectl_version: "1.25.0"
 
 # The default "archive" will download "kubectl" as a ".tar.gz" file. This is
 # about 2.5x smaller then "binary" but the tarball needs to be unarchived
@@ -30,10 +30,10 @@ kubectl_version: "1.24.4"
 # If download file size is important for you (e.g. slow download or download
 # over mobile link) stay with "archive". Otherwise "binary" might be an option.
 kubectl_download_filetype: "binary"
-# SHA512 checksum of the .tar.gz file (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.24.md#client-binaries)
-kubectl_checksum_archive: "sha512:ad4e57547bb5ef7e0e7a083bb9fa1d74fbd619252d413b1d556c8dc7836dcbad461376c36587a85df6540b04f87142fd99cd712ae0f4928f1b42d26b60bb2f15"
-# SHA512 checksum of the binary (see https://storage.googleapis.com/kubernetes-release/release/v1.24.4/bin/linux/amd64/kubectl.sha512)
-kubectl_checksum_binary: "sha512:4ac1f8dd8cb52addfd2bd8547be8bd29d941d4bc672d526d6d05c49a6e91b113e2da27a17aa6081dc8127d555e22546d3628c57ef593cef9dff7b6f7bf6f5519"
+# SHA512 checksum of the .tar.gz file (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#client-binaries)
+kubectl_checksum_archive: "sha512:34a7e9a496fff31a3afa6f5f7245212d051de3c2966e42a662040bde8a733c1cf55ce2e50227813fd29c6db758687a453a7df66b6c32f7f2c93959280c4e130a"
+# SHA512 checksum of the binary (see https://storage.googleapis.com/kubernetes-release/release/v1.25.0/bin/linux/amd64/kubectl.sha512)
+kubectl_checksum_binary: "sha512:fac91d79079672954b9ae9f80b9845fbf373e1c4d3663a84cc1538f89bf70cb85faee1bcd01b6263449f4a2995e7117e1c85ed8e5f137732650e8635b4ecee09"
 
 # Where to install "kubectl" binary
 kubectl_bin_directory: "/usr/local/bin"

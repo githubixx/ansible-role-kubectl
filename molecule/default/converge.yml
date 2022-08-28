@@ -12,7 +12,7 @@
     - name: Call setup
       setup:
 
-- hosts: test-kubectl-1804,test-kubectl-2004
+- hosts: test-kubectl-1804,test-kubectl-2004,test-kubectl-2204
   vars_files:
     - vars/ubuntu.yml
   tasks:

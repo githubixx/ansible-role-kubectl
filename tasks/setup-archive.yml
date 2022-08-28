@@ -4,6 +4,7 @@
     url: "https://storage.googleapis.com/kubernetes-release/release/v{{ kubectl_version }}/kubernetes-client-{{ kubectl_os }}-{{ kubectl_arch }}.tar.gz"
     checksum: "{{ kubectl_checksum_archive }}"
     dest: "{{ kubectl_tmp_directory }}"
+    mode: 0600
   tags:
     - kubectl
 

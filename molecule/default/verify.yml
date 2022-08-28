@@ -5,11 +5,11 @@
     expected_output: "v1.24.4"
   tasks:
     - name: Execute kubectl version to capture output
-      command: kubectl version --client=true
+      ansible.builtin.command: kubectl version --client=true
       register: kubectl_version_output
       changed_when: false
 
     - name: Ensure kubectl version output contains correct version string
-      assert:
+      ansible.builtin.assert:
         that:
           - "expected_output in kubectl_version_output.stdout"

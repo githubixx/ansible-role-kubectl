@@ -2,7 +2,7 @@
 - name: Verify setup
   hosts: all
   vars:
-    expected_output: "v1.23.2"
+    expected_output: "v1.24.4"
   tasks:
     - name: Execute kubectl version to capture output
       command: kubectl version --client=true

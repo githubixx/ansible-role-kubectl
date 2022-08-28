@@ -3,7 +3,7 @@ galaxy_info:
   author: Robert Wimmer
   description: Installs kubectl command line utility used to interact with the Kubernetes API Server.
   license: GPLv3
-  min_ansible_version: 2.9
+  min_ansible_version: "2.9"
   role_name: kubectl
   namespace: githubixx
   platforms:

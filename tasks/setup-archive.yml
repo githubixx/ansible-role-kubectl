@@ -1,6 +1,6 @@
 ---
 - name: Download kubectl archive
-  get_url:
+  ansible.builtin.get_url:
     url: "https://storage.googleapis.com/kubernetes-release/release/v{{ kubectl_version }}/kubernetes-client-{{ kubectl_os }}-{{ kubectl_arch }}.tar.gz"
     checksum: "{{ kubectl_checksum_archive }}"
     dest: "{{ kubectl_tmp_directory }}"
@@ -8,7 +8,7 @@
     - kubectl
 
 - name: Unarchive kubernetes-client
-  unarchive:
+  ansible.builtin.unarchive:
     src: "{{ kubectl_tmp_directory }}/kubernetes-client-{{ kubectl_os }}-{{ kubectl_arch }}.tar.gz"
     dest: "{{ kubectl_tmp_directory }}"
     remote_src: true
@@ -16,7 +16,7 @@
     - kubectl
 
 - name: Copy kubectl binary to destination directory
-  copy:
+  cansible.builtin.copy:
     src: "{{ kubectl_tmp_directory }}/kubernetes/client/bin/{{ item }}"
     dest: "{{ kubectl_bin_directory }}/{{ item }}"
     mode: "{{ kubectl_binary_mode }}"

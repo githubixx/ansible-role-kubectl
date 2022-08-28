@@ -16,7 +16,7 @@
     - kubectl
 
 - name: Copy kubectl binary to destination directory
-  cansible.builtin.copy:
+  ansible.builtin.copy:
     src: "{{ kubectl_tmp_directory }}/kubernetes/client/bin/{{ item }}"
     dest: "{{ kubectl_bin_directory }}/{{ item }}"
     mode: "{{ kubectl_binary_mode }}"

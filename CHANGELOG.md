@@ -1,5 +1,10 @@
 # Changelog
 
+## 22.0.0+1.27.1
+
+- update kubectl to `v1.27.1`
+- add Github release action to push new release to Ansible Galaxy
+
 ## 21.0.0+1.26.4
 
 - update kubectl to `v1.26.4`

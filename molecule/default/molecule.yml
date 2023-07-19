@@ -20,6 +20,9 @@ platforms:
   - name: test-kubectl-debian11
     image: debian:11
     pre_build_image: true
+  - name: test-kubectl-debian12
+    image: debian:12
+    pre_build_image: true
 
 provisioner:
   name: ansible

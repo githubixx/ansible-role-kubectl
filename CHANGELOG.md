@@ -6,6 +6,7 @@
 - remove Ubuntu `18.04` support (reached EOL)
 - remove Debian `10` (Buster) support (reached EOL)
 - add Debian `12` (Bookworm) support
+- refactor Molecule test
 
 ## 22.0.0+1.27.1
 

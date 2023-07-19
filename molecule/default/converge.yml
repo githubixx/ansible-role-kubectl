@@ -12,7 +12,7 @@
     - name: Call setup
       ansible.builtin.setup:
 
-- hosts: test-kubectl-1804,test-kubectl-2004,test-kubectl-2204
+- hosts: test-kubectl-2004,test-kubectl-2204
   vars_files:
     - vars/ubuntu.yml
   tasks:
@@ -20,7 +20,7 @@
       ansible.builtin.include_role:
         name: githubixx.kubectl
 
-- hosts: test-kubectl-debian10,test-kubectl-debian11
+- hosts: test-kubectl-debian11,test-kubectl-debian12
   tasks:
     - name: Include kubectl role
       ansible.builtin.include_role:

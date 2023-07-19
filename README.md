@@ -75,7 +75,7 @@ Afterwards molecule can be executed:
 molecule converge
 ```
 
-This will setup a few Docker container with Ubuntu 18.04 + 20.04 and Debian 10 + 11 with `kubectl` installed. To verify if everything worked:
+This will setup a few Docker container with Ubuntu 20.04/22.04 and Debian 10 + 11 with `kubectl` installed. To verify if everything worked:
 
 ```bash
 molecule verify

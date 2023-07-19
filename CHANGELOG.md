@@ -4,6 +4,7 @@
 
 - update kubectl to `v1.27.4`
 - remove Ubuntu `18.04` support (reached EOL)
+- remove Debian `10` (Buster) support (reached EOL)
 
 ## 22.0.0+1.27.1
 

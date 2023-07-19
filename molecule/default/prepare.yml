@@ -1,0 +1,16 @@
+---
+# Copyright (C) 2023 Robert Wimmer
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: Install Python
+      ansible.builtin.raw: |
+        apt-get update
+        apt-get -y install ca-certificates python3
+      changed_when: false
+      failed_when: false
+
+    - name: Call setup
+      ansible.builtin.setup:

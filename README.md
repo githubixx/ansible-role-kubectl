@@ -19,7 +19,7 @@ Role Variables
 ```yaml
 ---
 # "kubectl" version to install
-kubectl_version: "1.27.1"
+kubectl_version: "1.27.4"
 
 # The default "archive" will download "kubectl" as a ".tar.gz" file. This is
 # about 2.5x smaller then "binary" but the tarball needs to be unarchived
@@ -31,9 +31,9 @@ kubectl_version: "1.27.1"
 # over mobile link) stay with "archive". Otherwise "binary" might be an option.
 kubectl_download_filetype: "binary"
 # SHA512 checksum of the .tar.gz file (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#client-binaries)
-kubectl_checksum_archive: "sha512:98caa662a63d7f9ba36761caaf997be4d214ea2b921a4387965a67d168b52ea29ae9185de20192f7b4b9169a887beb19d22e5776ff0bb0b68907e177b11a8043"
-# SHA512 checksum of the binary (see https://storage.googleapis.com/kubernetes-release/release/v1.27.1/bin/linux/amd64/kubectl.sha512)
-kubectl_checksum_binary: "sha512:45c837500fd821553a76dfec626cbbe44ac9c5c2c82984e8cd1073615ed4707e69b0f6bd7adf001e0ddbcc89ccc7bca38162e7ee778473d59a09c91f3d99f7c2"
+kubectl_checksum_archive: "sha512:42ac0cdfb1d961cb14fbdf09370b0798a1cd687d576ded4c85a2574a2adc48e514c7df9c905f1e851fab2f69246efee73971fd39838351d3b194881cfa3b5409"
+# SHA512 checksum of the binary (see https://storage.googleapis.com/kubernetes-release/release/v1.27.4/bin/linux/amd64/kubectl.sha512)
+kubectl_checksum_binary: "sha512:73f3c5f343d52f5d87563666ed7ee0ccca84a1bc6dfb34d10baf9e3af1adf2358d4218a3ac4f8e8329a12c01dbf6dbbd8e77ff410041bfed93d979580d9bc749"
 
 # Where to install "kubectl" binary
 kubectl_bin_directory: "/usr/local/bin"
@@ -75,7 +75,7 @@ Afterwards molecule can be executed:
 molecule converge
 ```
 
-This will setup a few Docker container with Ubuntu 18.04 + 20.04 and Debian 10 + 11 with `kubectl` installed. To verify if everything worked:
+This will setup a few Docker container with Ubuntu 20.04/22.04 and Debian 11/12 with `kubectl` installed. To verify if everything worked:
 
 ```bash
 molecule verify

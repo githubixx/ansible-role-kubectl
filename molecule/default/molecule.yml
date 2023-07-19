@@ -17,14 +17,11 @@ platforms:
   - name: test-kubectl-2004
     image: ubuntu:20.04
     pre_build_image: true
-  - name: test-kubectl-1804
-    image: ubuntu:18.04
-    pre_build_image: true
-  - name: test-kubectl-debian10
-    image: debian:10
-    pre_build_image: true
   - name: test-kubectl-debian11
     image: debian:11
+    pre_build_image: true
+  - name: test-kubectl-debian12
+    image: debian:12
     pre_build_image: true
 
 provisioner:

@@ -1,17 +1,4 @@
 ---
-- hosts: all
-  gather_facts: false
-  tasks:
-    - name: Install Python
-      ansible.builtin.raw: |
-        apt-get update
-        apt-get -y install ca-certificates python3
-      changed_when: false
-      failed_when: false
-
-    - name: Call setup
-      ansible.builtin.setup:
-
 - hosts: test-kubectl-2004,test-kubectl-2204
   vars_files:
     - vars/ubuntu.yml

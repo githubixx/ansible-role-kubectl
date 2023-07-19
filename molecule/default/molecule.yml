@@ -17,9 +17,6 @@ platforms:
   - name: test-kubectl-2004
     image: ubuntu:20.04
     pre_build_image: true
-  - name: test-kubectl-debian10
-    image: debian:10
-    pre_build_image: true
   - name: test-kubectl-debian11
     image: debian:11
     pre_build_image: true

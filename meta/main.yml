@@ -13,7 +13,6 @@ galaxy_info:
         - jammy
     - name: Debian
       versions:
-        - buster
         - bullseye
   galaxy_tags:
     - kubernetes

@@ -1,5 +1,12 @@
 # Changelog
 
+## 23.0.0+1.28.1
+
+- update kubectl to `v1.28.1`
+- change download URL from `storage.googleapis.com` to `cdn.dl.k8s.io`
+- fix comment for `kubectl_download_filetype` variable
+- `kubectl_checksum_binary`: download checksum file for kubectl binary from `cdn.dl.k8s.io`
+
 ## 22.0.1+1.27.4
 
 - update kubectl to `v1.27.4`

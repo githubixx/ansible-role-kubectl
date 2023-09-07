@@ -1,7 +1,7 @@
 ---
 - name: Download kubectl binary
   ansible.builtin.get_url:
-    url: "https://storage.googleapis.com/kubernetes-release/release/v{{ kubectl_version }}/bin/{{ kubectl_os }}/{{ kubectl_arch }}/kubectl"
+    url: "https://cdn.dl.k8s.io/release/v{{ kubectl_version }}/bin/{{ kubectl_os }}/{{ kubectl_arch }}/kubectl"
     checksum: "{{ kubectl_checksum_binary }}"
     dest: "{{ kubectl_tmp_directory }}"
     mode: 0600

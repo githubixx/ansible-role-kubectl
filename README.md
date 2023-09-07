@@ -40,7 +40,7 @@ kubectl_checksum_archive: "sha512:b5e9823886c8c26c22078cf5cd233612f38240e5ceb3c7
 # Further information:
 #   - https://kubernetes.io/releases/download/#binaries
 #   - https://www.downloadkubernetes.com/
-kubectl_checksum_binary: "sha512:https://cdn.dl.k8s.io/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl.sha256"
+kubectl_checksum_binary: "sha512:https://cdn.dl.k8s.io/release/v{{ kubectl_version }}/bin/{{ kubectl_os }}/{{ kubectl_arch }}/kubectl.sha512"
 
 # Where to install "kubectl" binary
 kubectl_bin_directory: "/usr/local/bin"

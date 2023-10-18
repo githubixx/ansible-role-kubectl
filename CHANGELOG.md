@@ -1,5 +1,11 @@
 # Changelog
 
+## 23.0.1+1.28.3
+
+- update kubectl to `v1.28.3`
+- Molecule: add host_vars
+- Molecule: update tests
+
 ## 23.0.0+1.28.1
 
 - update kubectl to `v1.28.1`

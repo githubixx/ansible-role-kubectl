@@ -7,7 +7,7 @@
       ansible.builtin.include_role:
         name: githubixx.kubectl
 
-- hosts: test-kubectl-debian11,test-kubectl-debian12
+- hosts: test-kubectl-debian11,test-kubectl-debian12,test-kubectl-debian12-binary-sha512,test-kubectl-debian12-binary-sha256
   tasks:
     - name: Include kubectl role
       ansible.builtin.include_role:

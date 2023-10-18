@@ -6,7 +6,7 @@ Installs kubectl command line utility used to interact with the Kubernetes API S
 Versions
 --------
 
-I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `20.0.0+1.25.0` means this is release `20.0.0` of this role and `kubectl` client binary version is `1.25.0`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
+I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `23.0.1+1.28.3` means this is release `23.0.1` of this role and `kubectl` client binary version is `1.28.3`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
 
 Changelog
 ---------
@@ -17,9 +17,8 @@ Role Variables
 --------------
 
 ```yaml
----
 # "kubectl" version to install
-kubectl_version: "1.28.1"
+kubectl_version: "1.28.3"
 
 # The default "binary" will download "kubectl" as a binary file. This is
 # about 2.5x bigger then the ".tar.gz" file. The tarball needs to be unarchived
@@ -34,7 +33,7 @@ kubectl_version: "1.28.1"
 kubectl_download_filetype: "binary"
 #
 # SHA512 checksum of the .tar.gz file (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#client-binaries)
-kubectl_checksum_archive: "sha512:b5e9823886c8c26c22078cf5cd233612f38240e5ceb3c7bc5c032fbbfee59f6a631b53aa541bf8afc2eba496f5d0476357d1738cf771aaa95661c83d91372b51"
+kubectl_checksum_archive: "sha512:0d5e1d09eb0008a67b1d59aa63e8b6e7e7230ba1ab32cdac8a722188d166f5dc9008b595947c42aff8a410596ece0a4346cd19ac9ab3a2913cee0eaab127b238"
 #
 # SHA512 checksum of the binary. There is normally no need to change it.
 # Further information:
@@ -46,7 +45,7 @@ kubectl_checksum_binary: "sha512:https://cdn.dl.k8s.io/release/v{{ kubectl_versi
 kubectl_bin_directory: "/usr/local/bin"
 
 # Directory to store the kubectl archive
-kubectl_tmp_directory: "{{ lookup('env', 'TMPDIR') | default('/tmp',true) }}"
+kubectl_tmp_directory: "{{ lookup('env', 'TMPDIR') | default('/tmp', true) }}"
 
 # Owner of "kubectl" binary
 kubectl_owner: "root"

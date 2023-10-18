@@ -23,6 +23,12 @@ platforms:
   - name: test-kubectl-debian12
     image: debian:12
     pre_build_image: true
+  - name: test-kubectl-debian12-binary-sha512
+    image: debian:12
+    pre_build_image: true
+  - name: test-kubectl-debian12-binary-sha256
+    image: debian:12
+    pre_build_image: true
 
 provisioner:
   name: ansible

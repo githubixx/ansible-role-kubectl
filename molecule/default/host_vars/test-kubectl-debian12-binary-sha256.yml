@@ -1,2 +1,2 @@
 ---
-kubectl_checksum_binary: "sha256:0c680c90892c43e5ce708e918821f92445d1d244f9b3d7513023bcae9a6246d1"
+kubectl_checksum_binary: "sha256:https://cdn.dl.k8s.io/release/v{{ kubectl_version }}/bin/{{ kubectl_os }}/{{ kubectl_arch }}/kubectl.sha256"

@@ -1,5 +1,10 @@
 # Changelog
 
+## 23.1.0+1.29.3
+
+- update kubectl to `v1.29.3`
+- Molecule: update tests
+
 ## 23.0.2+1.28.5
 
 - update kubectl to `v1.28.5`

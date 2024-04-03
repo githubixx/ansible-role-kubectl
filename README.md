@@ -18,7 +18,7 @@ Role Variables
 
 ```yaml
 # "kubectl" version to install
-kubectl_version: "1.28.5"
+kubectl_version: "1.29.3"
 
 # The default "binary" will download "kubectl" as a binary file. This is
 # about 2.5x bigger then the ".tar.gz" file. The tarball needs to be unarchived
@@ -32,8 +32,9 @@ kubectl_version: "1.28.5"
 # over mobile link) stay with "archive". Otherwise "binary" might be an option.
 kubectl_download_filetype: "binary"
 #
-# SHA512 checksum of the .tar.gz file (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#client-binaries)
-kubectl_checksum_archive: "sha512:9cd61a97b37cb27cc565f5a2cebd6086b86148c5759eb0e6a0c03e7be4b701bec407c46a65633c51a00a7aa74733c2fdd082b9da3382d38525e2e5b8dbb11b77"
+# SHA512 checksum of the "kubernetes-client-linux-amd64.tar.gz" file
+# (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md#client-binaries)
+kubectl_checksum_archive: "sha512:c9cc7ab9e3aa776f2daab3a9e10ee78d57d0c081ef43f8032de36a61c6425ba527d5df92611b058672be0975a6b97ad3f3a169e282c26275d2c0e59e1f9b1173"
 #
 # SHA512 checksum of the binary. There is normally no need to change it.
 # Further information:

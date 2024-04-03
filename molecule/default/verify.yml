@@ -2,7 +2,7 @@
 - name: Verify setup
   hosts: all
   vars:
-    expected_output: "v1.28.5"
+    expected_output: "v1.29.3"
   tasks:
     - name: Execute kubectl version to capture output
       ansible.builtin.command: kubectl version --client=true

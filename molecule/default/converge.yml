@@ -1,5 +1,6 @@
 ---
-- hosts: test-kubectl-2004,test-kubectl-2204
+- name: Setup Ubuntu hosts
+  hosts: test-kubectl-2004,test-kubectl-2204
   vars_files:
     - vars/ubuntu.yml
   tasks:
@@ -7,7 +8,8 @@
       ansible.builtin.include_role:
         name: githubixx.kubectl
 
-- hosts: test-kubectl-debian11,test-kubectl-debian12,test-kubectl-debian12-binary-sha512,test-kubectl-debian12-binary-sha256
+- name: Setup Debian hosts
+  hosts: test-kubectl-debian11,test-kubectl-debian12,test-kubectl-debian12-binary-sha512,test-kubectl-debian12-binary-sha256
   tasks:
     - name: Include kubectl role
       ansible.builtin.include_role:

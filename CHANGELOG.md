@@ -1,10 +1,19 @@
 # Changelog
 
+## 23.2.0+1.30.5
+
+- update kubectl to `v1.30.5`
+- Download URL of `kubectl` archive has changed. `https://storage.googleapis.com` doesn't work anymore. Using `https://dl.k8s.io` instead now (see [Client Binaries](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.30.md#client-binaries)).
+- update `.yamllint`
+- update `meta/main.yml`
+- Molecule: update tests
+- Molecule: fix various `ansible-lint` issues
+
 ## 23.1.0+1.29.3
 
 - update kubectl to `v1.29.3`
 - update Github workflow
-- update .yamllint
+- update `.yamllint`
 - Molecule: update tests
 - Molecule: fix various ansible-lint issues
 

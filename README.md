@@ -1,24 +1,60 @@
-ansible-role-kubectl
-====================
+# ansible-role-kubectl
 
-Installs kubectl command line utility used to interact with the Kubernetes API Server.
+Installs `kubectl` command line utility used to interact with the Kubernetes API Server.
 
-Versions
---------
+## Versions
 
-I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `23.0.2+1.28.5` means this is release `23.0.2` of this role and `kubectl` client binary version is `1.28.5`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
+I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `23.2.0+1.30.5` means this is release `23.2.0` of this role and `kubectl` client binary version is `1.30.5`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
 
-Changelog
----------
+## Changelog
 
-see [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/master/CHANGELOG.md)
+**Change history:**
 
-Role Variables
---------------
+See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/master/CHANGELOG.md)
+
+**Recent changes:**
+
+## 23.2.0+1.30.5
+
+- update kubectl to `v1.30.5`
+- Download URL of `kubectl` archive has changed. `https://storage.googleapis.com` doesn't work anymore. Using `https://dl.k8s.io` instead now (see [Client Binaries](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.30.md#client-binaries)).
+- update `.yamllint`
+- update `meta/main.yml`
+- Molecule: update tests
+- Molecule: fix various `ansible-lint` issues
+
+## 23.1.0+1.29.3
+
+- update kubectl to `v1.29.3`
+- update Github workflow
+- update .yamllint
+- Molecule: update tests
+- Molecule: fix various ansible-lint issues
+
+## Installation
+
+- Directly download from Github (Change into Ansible roles directory before cloning. You can figure out the role path by using `ansible-config dump | grep DEFAULT_ROLES_PATH` command):
+`git clone https://github.com/githubixx/ansible-role-kubectl.git githubixx.kubectl`
+
+- Via `ansible-galaxy` command and download directly from Ansible Galaxy:
+`ansible-galaxy install role githubixx.kubectl`
+
+- Create a `requirements.yml` file with the following content (this will download the role from Github) and install with
+`ansible-galaxy role install -r requirements.yml` (change `version` if needed):
+
+```yaml
+---
+roles:
+  - name: githubixx.kubectl
+    src: https://github.com/githubixx/ansible-role-kubectl.git
+    version: 23.2.0+1.30.5
+```
+
+## Role Variables
 
 ```yaml
 # "kubectl" version to install
-kubectl_version: "1.29.3"
+kubectl_version: "1.30.5"
 
 # The default "binary" will download "kubectl" as a binary file. This is
 # about 2.5x bigger then the ".tar.gz" file. The tarball needs to be unarchived
@@ -64,8 +100,7 @@ kubectl_os: "linux"  # use "darwin" for MacOS X, "windows" for Windows
 kubectl_arch: "amd64"  # other possible values: "386","arm64","arm","ppc64le","s390x"
 ```
 
-Testing
--------
+## Testing
 
 This role has a small test setup that is created using [molecule](https://github.com/ansible-community/molecule). To run the tests follow the molecule [install guide](https://molecule.readthedocs.io/en/latest/installation.html). Also ensure that a Docker daemon runs on your machine.
 
@@ -82,7 +117,7 @@ Afterwards molecule can be executed:
 molecule converge
 ```
 
-This will setup a few Docker container with Ubuntu 20.04/22.04 and Debian 11/12 with `kubectl` installed. To verify if everything worked:
+This will setup a few Docker container with Ubuntu 20.04/22.04/24.04 and Debian 11/12 with `kubectl` installed. To verify if everything worked:
 
 ```bash
 molecule verify
@@ -94,8 +129,7 @@ To clean up run
 molecule destroy
 ```
 
-Example Playbook
-----------------
+## Example Playbook
 
 ```yaml
 - hosts: your-host
@@ -103,12 +137,10 @@ Example Playbook
     - githubixx.kubectl
 ```
 
-License
--------
+## License
 
 GNU GENERAL PUBLIC LICENSE Version 3
 
-Author Information
-------------------
+## Author Information
 
 [TauCeti Blog](http://www.tauceti.blog)

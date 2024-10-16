@@ -1,10 +1,10 @@
 ---
 - name: Download kubectl archive
   ansible.builtin.get_url:
-    url: "https://storage.googleapis.com/kubernetes-release/release/v{{ kubectl_version }}/kubernetes-client-{{ kubectl_os }}-{{ kubectl_arch }}.tar.gz"
+    url: "https://dl.k8s.io/v{{ kubectl_version }}/kubernetes-client-{{ kubectl_os }}-{{ kubectl_arch }}.tar.gz"
     checksum: "{{ kubectl_checksum_archive }}"
     dest: "{{ kubectl_tmp_directory }}"
-    mode: 0600
+    mode: "0600"
   tags:
     - kubectl
 

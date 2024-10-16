@@ -11,6 +11,9 @@ lint: |
   ansible-lint .
 
 platforms:
+  - name: test-kubectl-2404
+    image: ubuntu:24.04
+    pre_build_image: true
   - name: test-kubectl-2204
     image: ubuntu:22.04
     pre_build_image: true

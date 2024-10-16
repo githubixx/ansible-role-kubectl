@@ -4,7 +4,7 @@
     url: "https://cdn.dl.k8s.io/release/v{{ kubectl_version }}/bin/{{ kubectl_os }}/{{ kubectl_arch }}/kubectl"
     checksum: "{{ kubectl_checksum_binary }}"
     dest: "{{ kubectl_tmp_directory }}"
-    mode: 0600
+    mode: "0600"
   tags:
     - kubectl
 

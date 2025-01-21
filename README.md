@@ -4,7 +4,7 @@ Installs `kubectl` command line utility used to interact with the Kubernetes API
 
 ## Versions
 
-I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `23.2.0+1.30.5` means this is release `23.2.0` of this role and `kubectl` client binary version is `1.30.5`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
+I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `23.3.0+1.31.5` means this is release `23.3.0` of this role and `kubectl` client binary version is `1.31.5`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
 
 ## Changelog
 
@@ -14,6 +14,10 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 
 **Recent changes:**
 
+## 23.3.0+1.31.5
+
+- update kubectl to `v1.31.5`
+
 ## 23.2.0+1.30.5
 
 - update kubectl to `v1.30.5`
@@ -22,14 +26,6 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 - update `meta/main.yml`
 - Molecule: update tests
 - Molecule: fix various `ansible-lint` issues
-
-## 23.1.0+1.29.3
-
-- update kubectl to `v1.29.3`
-- update Github workflow
-- update .yamllint
-- Molecule: update tests
-- Molecule: fix various ansible-lint issues
 
 ## Installation
 
@@ -47,14 +43,14 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 roles:
   - name: githubixx.kubectl
     src: https://github.com/githubixx/ansible-role-kubectl.git
-    version: 23.2.0+1.30.5
+    version: 23.3.0+1.31.5
 ```
 
 ## Role Variables
 
 ```yaml
 # "kubectl" version to install
-kubectl_version: "1.30.5"
+kubectl_version: "1.31.5"
 
 # The default "binary" will download "kubectl" as a binary file. This is
 # about 2.5x bigger then the ".tar.gz" file. The tarball needs to be unarchived
@@ -67,10 +63,12 @@ kubectl_version: "1.30.5"
 # If download file size is important for you (e.g. slow download or download
 # over mobile link) stay with "archive". Otherwise "binary" might be an option.
 kubectl_download_filetype: "binary"
+
 #
 # SHA512 checksum of the "kubernetes-client-linux-amd64.tar.gz" file
-# (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.29.md#client-binaries)
-kubectl_checksum_archive: "sha512:c9cc7ab9e3aa776f2daab3a9e10ee78d57d0c081ef43f8032de36a61c6425ba527d5df92611b058672be0975a6b97ad3f3a169e282c26275d2c0e59e1f9b1173"
+# (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.31.md#client-binaries)
+kubectl_checksum_archive: "sha512:de866a5841bff9b9e6666e0065c2bfd0a8420d8fa2cb3b62ea6191105a2d8661dc44250c0d5e5ad4ed1a34348c75b25e55f25d78dc15cc4d3681946f71d59121"
+
 #
 # SHA512 checksum of the binary. There is normally no need to change it.
 # Further information:

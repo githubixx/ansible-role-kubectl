@@ -1,5 +1,11 @@
 # Changelog
 
+## 23.4.0+1.32.7
+
+- update kubectl to `v1.32.7`
+- removed Ubuntu 20.04 because reached end of life
+- add `.gitignore`
+
 ## 23.3.0+1.31.5
 
 - update kubectl to `v1.31.5`

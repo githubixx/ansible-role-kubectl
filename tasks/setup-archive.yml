@@ -1,4 +1,7 @@
 ---
+# Copyright (C) 2025 Robert Wimmer
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 - name: Download kubectl archive
   ansible.builtin.get_url:
     url: "https://dl.k8s.io/v{{ kubectl_version }}/kubernetes-client-{{ kubectl_os }}-{{ kubectl_arch }}.tar.gz"

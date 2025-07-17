@@ -1,8 +1,11 @@
 ---
+# Copyright (C) 2025 Robert Wimmer
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 - name: Verify setup
   hosts: all
   vars:
-    expected_output: "v1.31.5"
+    expected_output: "v1.32.7"
   tasks:
     - name: Execute kubectl version to capture output
       ansible.builtin.command: kubectl version --client=true

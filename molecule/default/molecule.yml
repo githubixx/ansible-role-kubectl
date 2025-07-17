@@ -1,4 +1,7 @@
 ---
+# Copyright (C) 2025 Robert Wimmer
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 dependency:
   name: galaxy
 
@@ -16,9 +19,6 @@ platforms:
     pre_build_image: true
   - name: test-kubectl-2204
     image: ubuntu:22.04
-    pre_build_image: true
-  - name: test-kubectl-2004
-    image: ubuntu:20.04
     pre_build_image: true
   - name: test-kubectl-debian11
     image: debian:11

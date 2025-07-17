@@ -1,6 +1,6 @@
 ---
 - name: Setup Ubuntu hosts
-  hosts: test-kubectl-2004,test-kubectl-2204,test-kubectl-2404
+  hosts: test-kubectl-2204,test-kubectl-2404
   vars_files:
     - vars/ubuntu.yml
   tasks:

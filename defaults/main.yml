@@ -1,4 +1,7 @@
 ---
+# Copyright (C) 2025 Robert Wimmer
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 # "kubectl" version to install
 kubectl_version: "1.32.7"
 

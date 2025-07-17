@@ -1,4 +1,7 @@
 ---
+# Copyright (C) 2025 Robert Wimmer
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 - name: Download kubectl binary
   ansible.builtin.get_url:
     url: "https://cdn.dl.k8s.io/release/v{{ kubectl_version }}/bin/{{ kubectl_os }}/{{ kubectl_arch }}/kubectl"

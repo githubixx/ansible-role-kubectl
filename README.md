@@ -86,7 +86,7 @@ kubectl_checksum_binary: "sha512:https://cdn.dl.k8s.io/release/v{{ kubectl_versi
 kubectl_bin_directory: "/usr/local/bin"
 
 # Directory to store the kubectl archive
-kubectl_tmp_directory: "{{ lookup('env', 'TMPDIR') | default('/tmp', true) }}"
+kubectl_tmp_directory: "{{ ansible_facts.env.TMPDIR | default('/tmp', true) }}"
 
 # Owner of "kubectl" binary
 kubectl_owner: "root"

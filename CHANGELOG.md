@@ -2,7 +2,7 @@
 
 ## 24.0.0+1.33.5
 
-- **Potential breaking change**: `kubectl_tmp_directory` default value changed from `{{ lookup('env', 'TMPDIR') | default('/tmp', true) }}` to `{{ ansible_env.TMPDIR | default('/tmp', true) }}`. The old implementation looked up `TMPDIR` variable on the Ansible controller. But that was not the intention here. The new default uses the `TMPDIR` value of the remote machine where `kubectl` should be installed. If you set this variable on your own nothing will change for you. And even if you use the default setting chances are low that you notice the change. Still, please test if this change affects you.
+- **Potential breaking change**: `kubectl_tmp_directory` default value changed from `{{ lookup('env', 'TMPDIR') | default('/tmp', true) }}` to `{{ ansible_env.TMPDIR | default('/tmp', true) }}`. The old implementation looked up `TMPDIR` variable on the Ansible controller. But that was not the intention here. The new default uses the `TMPDIR` value of the remote machine where `kubectl` should be installed. If you set this variable on your own nothing will change for you. And even if you use the default setting chances are low that you notice the change. Still, please test if this change affects you (contribution by @fhennig).
 - update kubectl to `v1.33.5`
 
 ## 23.4.0+1.32.7

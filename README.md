@@ -4,7 +4,7 @@ Installs `kubectl` command line utility used to interact with the Kubernetes API
 
 ## Versions
 
-I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `24.0.0+1.33.5` means this is release `24.0.0` of this role and `kubectl` client binary version is `1.33.5`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
+I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `24.0.1+1.33.5` means this is release `24.0.1` of this role and `kubectl` client binary version is `1.33.5`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
 
 ## Changelog
 
@@ -13,6 +13,12 @@ I tag every release and try to stay with [semantic versioning](http://semver.org
 See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/master/CHANGELOG.md)
 
 **Recent changes:**
+
+## 24.0.1+1.33.5
+
+- update `README.md`
+
+## 24.0.0+1.33.5
 
 - **Potential breaking change**: `kubectl_tmp_directory` default value changed from `{{ lookup('env', 'TMPDIR') | default('/tmp', true) }}` to `{{ ansible_env.TMPDIR | default('/tmp', true) }}`. The old implementation looked up `TMPDIR` variable on the Ansible controller. But that was not the intention here. The new default uses the `TMPDIR` value of the remote machine where `kubectl` should be installed. If you set this variable on your own nothing will change for you. And even if you use the default setting chances are low that you notice the change. Still, please test if this change affects you (contribution by @fhennig).
 - update kubectl to `v1.33.5`
@@ -52,14 +58,14 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 roles:
   - name: githubixx.kubectl
     src: https://github.com/githubixx/ansible-role-kubectl.git
-    version: 24.0.0+1.33.5
+    version: 24.0.1+1.33.5
 ```
 
 ## Role Variables
 
 ```yaml
 # "kubectl" version to install
-kubectl_version: "1.32.7"
+kubectl_version: "1.33.5"
 
 # The default "binary" will download "kubectl" as a binary file. This is
 # about 2.5x bigger then the ".tar.gz" file. The tarball needs to be unarchived

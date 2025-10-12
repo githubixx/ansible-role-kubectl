@@ -4,7 +4,7 @@ Installs `kubectl` command line utility used to interact with the Kubernetes API
 
 ## Versions
 
-I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `23.4.0+1.32.7` means this is release `23.4.0` of this role and `kubectl` client binary version is `1.32.7`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
+I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `24.0.0+1.33.5` means this is release `24.0.0` of this role and `kubectl` client binary version is `1.33.5`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
 
 ## Changelog
 
@@ -13,6 +13,9 @@ I tag every release and try to stay with [semantic versioning](http://semver.org
 See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/master/CHANGELOG.md)
 
 **Recent changes:**
+
+- **Potential breaking change**: `kubectl_tmp_directory` default value changed from `{{ lookup('env', 'TMPDIR') | default('/tmp', true) }}` to `{{ ansible_env.TMPDIR | default('/tmp', true) }}`. The old implementation looked up `TMPDIR` variable on the Ansible controller. But that was not the intention here. The new default uses the `TMPDIR` value of the remote machine where `kubectl` should be installed. If you set this variable on your own nothing will change for you. And even if you use the default setting chances are low that you notice the change. Still, please test if this change affects you.
+- update kubectl to `v1.33.5`
 
 ## 23.4.0+1.32.7
 
@@ -49,7 +52,7 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 roles:
   - name: githubixx.kubectl
     src: https://github.com/githubixx/ansible-role-kubectl.git
-    version: 23.4.0+1.32.7
+    version: 24.0.0+1.33.5
 ```
 
 ## Role Variables
@@ -73,7 +76,7 @@ kubectl_download_filetype: "binary"
 #
 # SHA512 checksum of the "kubernetes-client-linux-amd64.tar.gz" file
 # (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.32.md#client-binaries)
-kubectl_checksum_archive: "sha512:fb31a1727c8a50ae1a2b0a74434569d32e847fd5248a35b2345c063d588e435e676fffea6db861e8abf6621fc41ace92a48e5b2c34df2272db955fe951d37cfe"
+kubectl_checksum_archive: "sha512:c0959e01d4d82b293848202b4392f8c784ca7e27abb68ebae36c303e34abb83378bcfa5679699c15681f1a3fc6eb801ea1204e086fc8e6512f11023fb1e178e7"
 
 #
 # SHA512 checksum of the binary. There is normally no need to change it.

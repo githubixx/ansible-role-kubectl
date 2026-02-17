@@ -1,5 +1,10 @@
 # Changelog
 
+## 25.0.0+1.34.4
+
+- update kubectl to `v1.34.4`
+- replace injected `ansible_*` facts usage with `ansible_facts[...]` (prepares for ansible-core 2.24 where `INJECT_FACTS_AS_VARS` default changes)
+
 ## 24.0.2+1.33.8
 
 - update kubectl to `v1.33.8`

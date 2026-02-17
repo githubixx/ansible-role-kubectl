@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # "kubectl" version to install
-kubectl_version: "1.33.8"
+kubectl_version: "1.34.4"
 
 # The default "binary" will download "kubectl" as a binary file. This is
 # about 2.5x bigger then the ".tar.gz" file. The tarball needs to be unarchived
@@ -20,7 +20,7 @@ kubectl_download_filetype: "binary"
 #
 # SHA512 checksum of the "kubernetes-client-linux-amd64.tar.gz" file
 # (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.33.md#client-binaries)
-kubectl_checksum_archive: "sha512:0dc7ccca28a4272147de370af7d429b86426faf3c2ded1241c33a57c12f13d728cc207b7c2a46f0dfd28b46bdfde7152bc15afc446dd5a41ce3b14f882614dbb"
+kubectl_checksum_archive: "sha512:018d0a75b74b55942a0777afc7edf64ca98c004e6e12f9dc93ad75c26cb58089104ba0f9ceae2f0be5a6f6854948c705b0eb828f0960302a0ff84d57c464fc09"
 
 #
 # SHA512 checksum of the binary. There is normally no need to change it.
@@ -33,7 +33,7 @@ kubectl_checksum_binary: "sha512:https://dl.k8s.io/release/v{{ kubectl_version }
 kubectl_bin_directory: "/usr/local/bin"
 
 # Directory to store the kubectl archive
-kubectl_tmp_directory: "{{ ansible_env.TMPDIR | default('/tmp', true) }}"
+kubectl_tmp_directory: "{{ ansible_facts['env']['TMPDIR'] | default('/tmp', true) }}"
 
 # Owner of "kubectl" binary
 kubectl_owner: "root"

@@ -14,6 +14,11 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 
 **Recent changes:**
 
+## 25.0.0+1.34.4
+
+- update kubectl to `v1.34.4`
+- replace injected `ansible_*` facts usage with `ansible_facts[...]` (prepares for ansible-core 2.24 where `INJECT_FACTS_AS_VARS` default changes)
+
 ## 24.0.2+1.33.8
 
 - update kubectl to `v1.33.8`
@@ -26,7 +31,7 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 
 ## 24.0.0+1.33.5
 
-- **Potential breaking change**: `kubectl_tmp_directory` default value changed from `{{ lookup('env', 'TMPDIR') | default('/tmp', true) }}` to `{{ ansible_env.TMPDIR | default('/tmp', true) }}`. The old implementation looked up `TMPDIR` variable on the Ansible controller. But that was not the intention here. The new default uses the `TMPDIR` value of the remote machine where `kubectl` should be installed. If you set this variable on your own nothing will change for you. And even if you use the default setting chances are low that you notice the change. Still, please test if this change affects you (contribution by @fhennig).
+- **Potential breaking change**: `kubectl_tmp_directory` default value changed from `{{ lookup('env', 'TMPDIR') | default('/tmp', true) }}` to `{{ ansible_facts['env']['TMPDIR'] | default('/tmp', true) }}`. The old implementation looked up `TMPDIR` variable on the Ansible controller. But that was not the intention here. The new default uses the `TMPDIR` value of the remote machine where `kubectl` should be installed. If you set this variable on your own nothing will change for you. And even if you use the default setting chances are low that you notice the change. Still, please test if this change affects you (contribution by @fhennig).
 - update kubectl to `v1.33.5`
 
 ## 23.4.0+1.32.7
@@ -64,14 +69,14 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 roles:
   - name: githubixx.kubectl
     src: https://github.com/githubixx/ansible-role-kubectl.git
-    version: 24.0.2+1.33.8
+    version: 25.0.0+1.34.4
 ```
 
 ## Role Variables
 
 ```yaml
 # "kubectl" version to install
-kubectl_version: "1.33.8"
+kubectl_version: "1.34.4"
 
 # The default "binary" will download "kubectl" as a binary file. This is
 # about 2.5x bigger then the ".tar.gz" file. The tarball needs to be unarchived
@@ -101,7 +106,7 @@ kubectl_checksum_binary: "sha512:https://dl.k8s.io/release/v{{ kubectl_version }
 kubectl_bin_directory: "/usr/local/bin"
 
 # Directory to store the kubectl archive
-kubectl_tmp_directory: "{{ ansible_env.TMPDIR | default('/tmp', true) }}"
+kubectl_tmp_directory: "{{ ansible_facts['env']['TMPDIR'] | default('/tmp', true) }}"
 
 # Owner of "kubectl" binary
 kubectl_owner: "root"

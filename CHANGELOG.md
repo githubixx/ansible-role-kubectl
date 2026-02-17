@@ -1,5 +1,9 @@
 # Changelog
 
+## 26.0.0+1.35.1
+
+- update kubectl to `v1.35.1`
+
 ## 25.0.0+1.34.4
 
 - update kubectl to `v1.34.4`

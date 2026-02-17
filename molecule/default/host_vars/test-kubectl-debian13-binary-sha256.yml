@@ -1,5 +1,5 @@
 ---
-# Copyright (C) 2025 Robert Wimmer
+# Copyright (C) 2026 Robert Wimmer
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-kubectl_checksum_binary: "sha256:https://cdn.dl.k8s.io/release/v{{ kubectl_version }}/bin/{{ kubectl_os }}/{{ kubectl_arch }}/kubectl.sha256"
+kubectl_checksum_binary: "sha256:https://dl.k8s.io/release/v{{ kubectl_version }}/bin/{{ kubectl_os }}/{{ kubectl_arch }}/kubectl.sha256"

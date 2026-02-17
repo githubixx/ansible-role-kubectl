@@ -1,5 +1,5 @@
 ---
-# Copyright (C) 2025 Robert Wimmer
+# Copyright (C) 2026 Robert Wimmer
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 dependency:
@@ -29,8 +29,8 @@ platforms:
   - name: test-kubectl-debian12-binary-sha512
     image: debian:12
     pre_build_image: true
-  - name: test-kubectl-debian12-binary-sha256
-    image: debian:12
+  - name: test-kubectl-debian13-binary-sha256
+    image: debian:13
     pre_build_image: true
 
 provisioner:

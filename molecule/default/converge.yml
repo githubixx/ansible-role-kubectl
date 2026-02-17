@@ -1,5 +1,5 @@
 ---
-# Copyright (C) 2025 Robert Wimmer
+# Copyright (C) 2026 Robert Wimmer
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 - name: Setup Ubuntu hosts
@@ -12,7 +12,7 @@
         name: githubixx.kubectl
 
 - name: Setup Debian hosts
-  hosts: test-kubectl-debian11,test-kubectl-debian12,test-kubectl-debian12-binary-sha512,test-kubectl-debian12-binary-sha256
+  hosts: test-kubectl-debian11,test-kubectl-debian12,test-kubectl-debian12-binary-sha512,test-kubectl-debian13-binary-sha256
   tasks:
     - name: Include kubectl role
       ansible.builtin.include_role:

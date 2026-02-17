@@ -14,6 +14,10 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 
 **Recent changes:**
 
+## 25.0.2+1.34.4
+
+- update kubectl to `v1.34.4`
+
 ## 24.0.2+1.33.8
 
 - update kubectl to `v1.33.8`
@@ -64,14 +68,14 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 roles:
   - name: githubixx.kubectl
     src: https://github.com/githubixx/ansible-role-kubectl.git
-    version: 24.0.2+1.33.8
+    version: 25.0.2+1.34.4
 ```
 
 ## Role Variables
 
 ```yaml
 # "kubectl" version to install
-kubectl_version: "1.33.8"
+kubectl_version: "1.34.4"
 
 # The default "binary" will download "kubectl" as a binary file. This is
 # about 2.5x bigger then the ".tar.gz" file. The tarball needs to be unarchived

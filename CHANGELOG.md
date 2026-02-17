@@ -1,5 +1,9 @@
 # Changelog
 
+## 24.0.2+1.33.8
+
+- Download URL `cdn.dl.k8s.io` doesn't work anymore. Changed it to `dl.k8s.io`
+
 ## 24.0.1+1.33.5
 
 - update `README.md`

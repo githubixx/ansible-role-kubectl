@@ -14,6 +14,12 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 
 **Recent changes:**
 
+## 24.0.2+1.33.8
+
+- update kubectl to `v1.33.8`
+- Download URL `cdn.dl.k8s.io` doesn't work anymore. Changed it to `dl.k8s.io`
+- Molecule: add `Debian 13` / change download URL to `dl.k8s.io`
+
 ## 24.0.1+1.33.5
 
 - update `README.md`
@@ -58,14 +64,14 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 roles:
   - name: githubixx.kubectl
     src: https://github.com/githubixx/ansible-role-kubectl.git
-    version: 24.0.1+1.33.5
+    version: 24.0.2+1.33.8
 ```
 
 ## Role Variables
 
 ```yaml
 # "kubectl" version to install
-kubectl_version: "1.33.5"
+kubectl_version: "1.33.8"
 
 # The default "binary" will download "kubectl" as a binary file. This is
 # about 2.5x bigger then the ".tar.gz" file. The tarball needs to be unarchived
@@ -82,7 +88,7 @@ kubectl_download_filetype: "binary"
 #
 # SHA512 checksum of the "kubernetes-client-linux-amd64.tar.gz" file
 # (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.32.md#client-binaries)
-kubectl_checksum_archive: "sha512:c0959e01d4d82b293848202b4392f8c784ca7e27abb68ebae36c303e34abb83378bcfa5679699c15681f1a3fc6eb801ea1204e086fc8e6512f11023fb1e178e7"
+kubectl_checksum_archive: "sha512:0dc7ccca28a4272147de370af7d429b86426faf3c2ded1241c33a57c12f13d728cc207b7c2a46f0dfd28b46bdfde7152bc15afc446dd5a41ce3b14f882614dbb"
 
 #
 # SHA512 checksum of the binary. There is normally no need to change it.

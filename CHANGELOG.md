@@ -2,7 +2,9 @@
 
 ## 24.0.2+1.33.8
 
+- update kubectl to `v1.33.8`
 - Download URL `cdn.dl.k8s.io` doesn't work anymore. Changed it to `dl.k8s.io`
+- Molecule: add `Debian 13` / change download URL to `dl.k8s.io`
 
 ## 24.0.1+1.33.5
 

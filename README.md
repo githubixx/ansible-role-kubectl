@@ -4,7 +4,7 @@ Installs `kubectl` command line utility used to interact with the Kubernetes API
 
 ## Versions
 
-I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `26.0.0+1.35.1` means this is release `26.0.0` of this role and `kubectl` client binary version is `1.35.1`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
+I tag every release and try to stay with [semantic versioning](http://semver.org). If you want to use the role I recommend to checkout the latest tag. The master branch is basically development while the tags mark stable releases. But in general I try to keep master in good shape too. A tag `26.0.1+1.35.5` means this is release `26.0.1` of this role and `kubectl` client binary version is `1.35.5`. If the role itself changes `X.Y.Z` before `+` will increase. If the Kubernetes version changes `X.Y.Z` after `+` will increase. This allows to tag bugfixes and new major versions of the role while it's still developed for a specific Kubernetes release.
 
 ## Changelog
 
@@ -14,9 +14,9 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 
 **Recent changes:**
 
-## 26.0.0+1.35.1
+## 26.0.1+1.35.5
 
-- update kubectl to `v1.35.1`
+- update kubectl to `v1.35.5`
 
 ## 25.0.0+1.34.4
 
@@ -73,14 +73,14 @@ See full [CHANGELOG](https://github.com/githubixx/ansible-role-kubectl/blob/mast
 roles:
   - name: githubixx.kubectl
     src: https://github.com/githubixx/ansible-role-kubectl.git
-    version: 26.0.0+1.35.1
+    version: 26.0.1+1.35.5
 ```
 
 ## Role Variables
 
 ```yaml
 # "kubectl" version to install
-kubectl_version: "1.35.1"
+kubectl_version: "1.35.5"
 
 # The default "binary" will download "kubectl" as a binary file. This is
 # about 2.5x bigger then the ".tar.gz" file. The tarball needs to be unarchived
@@ -96,8 +96,8 @@ kubectl_download_filetype: "binary"
 
 #
 # SHA512 checksum of the "kubernetes-client-linux-amd64.tar.gz" file
-# (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.32.md#client-binaries)
-kubectl_checksum_archive: "sha512:0dc7ccca28a4272147de370af7d429b86426faf3c2ded1241c33a57c12f13d728cc207b7c2a46f0dfd28b46bdfde7152bc15afc446dd5a41ce3b14f882614dbb"
+# (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.35.md#client-binaries)
+kubectl_checksum_archive: "sha512:5fc5b3e63884f18a5ac8856a4cb87a505826ff706a555baa30c1ce7eee1e7123c4f4a3a87f09a48924c15b50de82cf0bac37b859a92024eb9106a948f1ea9ab5"
 
 #
 # SHA512 checksum of the binary. There is normally no need to change it.

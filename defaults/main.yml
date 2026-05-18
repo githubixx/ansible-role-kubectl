@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # "kubectl" version to install
-kubectl_version: "1.35.1"
+kubectl_version: "1.35.5"
 
 # The default "binary" will download "kubectl" as a binary file. This is
 # about 2.5x bigger then the ".tar.gz" file. The tarball needs to be unarchived
@@ -19,8 +19,8 @@ kubectl_download_filetype: "binary"
 
 #
 # SHA512 checksum of the "kubernetes-client-linux-amd64.tar.gz" file
-# (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.33.md#client-binaries)
-kubectl_checksum_archive: "sha512:51a45687e5cc04620673d92cc31308ccfc60fa4fd4e0836369b32d98841d4617343dfb899e6c9dd4c665e85bf1fe55402ae234481a6d6bd9275fa1d89cfc676e"
+# (see https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.35.md#client-binaries)
+kubectl_checksum_archive: "sha512:5fc5b3e63884f18a5ac8856a4cb87a505826ff706a555baa30c1ce7eee1e7123c4f4a3a87f09a48924c15b50de82cf0bac37b859a92024eb9106a948f1ea9ab5"
 
 #
 # SHA512 checksum of the binary. There is normally no need to change it.
